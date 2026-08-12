@@ -84,6 +84,78 @@ export const sampleProjects = [
     ]
   },
   {
+  id: 'proj_cloudminex',
+  name: 'CloudMineX',
+  domain: 'cloudminex.com',
+  url: 'https://cloudminex.com',
+  logo: 'https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=120&auto=format&fit=crop&q=80',
+  banner: 'https://images.unsplash.com/photo-1642543492481-44e81e3914a7?w=600&auto=format&fit=crop&q=80',
+  status: 'PAYING',
+  category: 'Class "Premium" (TOP Choices)',
+  rating: 4.9,
+  reviewsCount: 1240,
+  votes: { excellent: 1210, good: 20, average: 10, bad: 0, veryBad: 0 },
+  ourInvestment: 1500,
+  minDeposit: 100,
+  maxDeposit: 20000,
+  roi: 12.00,
+  duration: '5% to 12% daily (7 - 180 days)',
+  withdrawalType: 'Instant',
+  referralPercent: '10% (First Deposit) / 5% - 2% - 1%',
+  lastPayoutDate: getNowDateTimeStr(),
+  startDate: '2026-08-02',
+  monitoredDays: 10,
+  monitorsCount: 1,
+  ssl: 'EV SSL',
+  hosting: 'Cloudflare / CloudMineX Inc',
+  processors: ['MTN MoMo', 'Telecel Cash', 'AT Money', 'USDT TRC20', 'USDT BEP20', 'Bitcoin', 'Ethereum'],
+  telegram: 'https://t.me/cloudminex_official',
+  description: 'Next-Gen Cloud Mining Infrastructure providing automated, high-density cloud mining nodes. Rent enterprise-grade ASIC hash power and generate daily crypto rewards with zero hardware maintenance.',
+  country: 'United States',
+  company: 'CloudMineX Inc.',
+  countryStats: [
+    { country: 'Ghana', flag: '🇬🇭', votes: 45, percent: 50 },
+    { country: 'Nigeria', flag: '🇳🇬', votes: 20, percent: 22 },
+    { country: 'South Africa', flag: '🇿🇦', votes: 12, percent: 13 },
+    { country: 'United States', flag: '🇺🇸', votes: 8, percent: 9 },
+    { country: 'United Kingdom', flag: '🇬🇧', votes: 5, percent: 6 }
+  ],
+  investmentPlans: [
+    { name: 'Starter Miner', minDeposit: 100, maxDeposit: 299, roi: '5.0% Daily', duration: '7 Days', compounding: 'No' },
+    { name: 'Basic Miner', minDeposit: 300, maxDeposit: 699, roi: '6.0% Daily', duration: '14 Days', compounding: 'No' },
+    { name: 'Pro Miner', minDeposit: 700, maxDeposit: 1499, roi: '7.0% Daily', duration: '30 Days', compounding: 'No' },
+    { name: 'Advanced Miner', minDeposit: 1500, maxDeposit: 2999, roi: '8.0% Daily', duration: '60 Days', compounding: 'No' },
+    { name: 'Premium Miner', minDeposit: 3000, maxDeposit: 4999, roi: '9.0% Daily', duration: '90 Days', compounding: 'No' },
+    { name: 'VIP Miner', minDeposit: 5000, maxDeposit: 9999, roi: '10.0% Daily', duration: '90 Days', compounding: 'No' },
+    { name: 'Enterprise Miner', minDeposit: 10000, maxDeposit: 19999, roi: '11.0% Daily', duration: '120 Days', compounding: 'No' },
+    { name: 'Titan Rig Miner', minDeposit: 20000, maxDeposit: 50000, roi: '12.0% Daily', duration: '180 Days', compounding: 'No' }
+  ],
+  whois: {
+    domain: 'cloudminex.com',
+    ip: '104.21.55.120',
+    country: 'United States',
+    registrar: 'Cloudflare Inc.',
+    created: '2026-08-02',
+    expires: '2027-08-02',
+    updated: '2026-08-02',
+    nameservers: 'ns1.cloudflare.com, ns2.cloudflare.com'
+  },
+  payoutHistory: [
+    { date: 'Aug 12, 2026 14:10:02', amount: 'GHS 350.00', currency: 'MTN MoMo', wallet: 'Kwame', txHash: 'Verified Instant', status: 'Completed' },
+    { date: 'Aug 12, 2026 13:45:10', amount: 'GHS 720.00', currency: 'MTN MoMo', wallet: 'Kofi', txHash: 'Verified Instant', status: 'Completed' },
+    { date: 'Aug 12, 2026 12:20:15', amount: 'GHS 200.00', currency: 'AT Money', wallet: 'Rita', txHash: 'Verified Instant', status: 'Completed' },
+    { date: 'Aug 12, 2026 11:05:40', amount: 'GHS 1,200.00', currency: 'USDT TRC20', wallet: 'Grace', txHash: 'Verified Instant', status: 'Completed' },
+    { date: 'Aug 12, 2026 10:15:22', amount: 'GHS 450.00', currency: 'MTN MoMo', wallet: 'Belinda', txHash: 'Verified Instant', status: 'Completed' }
+  ],
+  trafficData: [
+    { date: 'Aug 02, 2026', value: 1500 },
+    { date: 'Aug 04, 2026', value: 18000 },
+    { date: 'Aug 06, 2026', value: 42000 },
+    { date: 'Aug 08, 2026', value: 85000 },
+    { date: 'Aug 10, 2026', value: 124000 }
+  ]
+},
+  {
     id: 'proj_winvest',
     name: 'Winvest',
     domain: 'winvest.com',
