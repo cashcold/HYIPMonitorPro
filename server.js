@@ -10,8 +10,12 @@ const app = express();
 // Dynamically use Heroku's assigned port (process.env.PORT) or default to 3000 locally
 const PORT = process.env.PORT || 3000;
 
-// Enable CORS for cross-origin frontend requests
-app.use(cors());
+// Enable CORS for cross-origin frontend requests (Netlify -> Heroku)
+app.use(cors({
+  origin: '*', // Adjust to your Netlify domain in production if preferred
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 // Body parser
 app.use(express.json({ limit: '10mb' }));
@@ -249,7 +253,13 @@ app.post('/api/upload', (req, res) => {
     const name = filename || `upload_${Date.now()}.png`;
     const filepath = path.join(uploadsDir, name);
     fs.writeFileSync(filepath, base64Data, 'base64');
-    res.json({ success: true, url: `/uploads/${name}` });
+
+    // Dynamically resolve full domain URL for client rendering
+    const protocol = req.protocol;
+    const host = req.get('host');
+    const fullUrl = `${protocol}://${host}/uploads/${name}`;
+
+    res.json({ success: true, url: fullUrl });
   } catch (err) {
     res.status(500).json({ success: false, error: err.message });
   }
@@ -265,10 +275,16 @@ async function startServer() {
     app.use(vite.middlewares);
   } else {
     const distPath = path.join(process.cwd(), 'dist');
-    app.use(express.static(distPath));
-    app.get('*', (req, res) => {
-      res.sendFile(path.join(distPath, 'index.html'));
-    });
+    if (fs.existsSync(distPath)) {
+      app.use(express.static(distPath));
+      app.get('*', (req, res) => {
+        // Exclude API requests from fallback index.html redirect
+        if (req.path.startsWith('/api') || req.path.startsWith('/uploads')) {
+          return res.status(404).json({ success: false, error: 'Route not found' });
+        }
+        res.sendFile(path.join(distPath, 'index.html'));
+      });
+    }
   }
 
   app.listen(PORT, '0.0.0.0', () => {
