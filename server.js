@@ -1,11 +1,17 @@
 import express from 'express';
 import path from 'path';
 import fs from 'fs';
+import cors from 'cors';
 import { createServer as createViteServer } from 'vite';
 import { db } from './server/db.js';
 
 const app = express();
-const PORT = 3000;
+
+// Dynamically use Heroku's assigned port (process.env.PORT) or default to 3000 locally
+const PORT = process.env.PORT || 3000;
+
+// Enable CORS for cross-origin frontend requests
+app.use(cors());
 
 // Body parser
 app.use(express.json({ limit: '10mb' }));
@@ -249,7 +255,6 @@ app.post('/api/upload', (req, res) => {
   }
 });
 
-
 // --- VITE MIDDLEWARE FOR DEV & STATIC SERVING FOR PRODUCTION ---
 async function startServer() {
   if (process.env.NODE_ENV !== 'production') {
@@ -267,7 +272,7 @@ async function startServer() {
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`🚀 HYIP Monitor Pro Server running on http://0.0.0.0:${PORT}`);
+    console.log(`🚀 HYIP Monitor Pro Server running on port ${PORT}`);
   });
 }
 
