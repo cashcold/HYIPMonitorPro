@@ -96,7 +96,7 @@ export const sampleProjects = [
   reviewsCount: 1240,
   votes: { excellent: 1210, good: 20, average: 10, bad: 0, veryBad: 0 },
   ourInvestment: 1500,
-  minDeposit: 100,
+  minDeposit: 10,
   maxDeposit: 20000,
   roi: 12.00,
   duration: '5% to 12% daily (7 - 180 days)',
@@ -121,7 +121,7 @@ export const sampleProjects = [
     { country: 'United Kingdom', flag: '🇬🇧', votes: 5, percent: 6 }
   ],
   investmentPlans: [
-    { name: 'Starter Miner', minDeposit: 100, maxDeposit: 299, roi: '5.0% Daily', duration: '7 Days', compounding: 'No' },
+    { name: 'Starter Miner', minDeposit: 10, maxDeposit: 299, roi: '5.0% Daily', duration: '7 Days', compounding: 'No' },
     { name: 'Basic Miner', minDeposit: 300, maxDeposit: 699, roi: '6.0% Daily', duration: '14 Days', compounding: 'No' },
     { name: 'Pro Miner', minDeposit: 700, maxDeposit: 1499, roi: '7.0% Daily', duration: '30 Days', compounding: 'No' },
     { name: 'Advanced Miner', minDeposit: 1500, maxDeposit: 2999, roi: '8.0% Daily', duration: '60 Days', compounding: 'No' },
