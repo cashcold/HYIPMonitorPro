@@ -1,0 +1,6 @@
+{
+  "name": "HYIP Monitor Pro",
+  "description": "Production-ready HYIP Investment Monitoring Platform with admin panel, live status tracking, reviews, payout histories, scam reporting, and traffic stats.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
