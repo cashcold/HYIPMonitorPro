@@ -1,8 +1,8 @@
 // API Service for HYIP Monitor Pro Frontend
 
-// Dynamically use Netlify environment variable, Heroku backend, or fallback
-const BACKEND_URL = import.meta.env.VITE_API_URL || 'https://hyipmonitorpro-6ddf03571b92.herokuapp.com';
-const API_BASE = `${BACKEND_URL}/api`;
+// Dynamically use environment variable or fallback to relative /api
+const BACKEND_URL = import.meta.env.VITE_API_URL || '';
+const API_BASE = BACKEND_URL ? `${BACKEND_URL}/api` : '/api';
 
 export async function fetchStats() {
   const res = await fetch(`${API_BASE}/statistics`);

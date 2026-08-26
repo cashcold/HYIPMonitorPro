@@ -213,6 +213,11 @@ class ProjectCard extends Component {
               <img
                 src={project.banner || project.logo}
                 alt={project.name}
+                referrerPolicy="no-referrer"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = '/images/aura_diamond_banner.jpg';
+                }}
                 className="img-fluid rounded border border-slate-700 shadow-sm"
                 style={{ maxHeight: '70px', width: '100%', objectFit: 'cover' }}
               />

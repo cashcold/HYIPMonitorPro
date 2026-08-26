@@ -194,6 +194,11 @@ class ProjectDetailsPage extends Component {
                 <img
                   src={project.logo}
                   alt={project.name}
+                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = '/images/aura_diamond_logo.jpg';
+                  }}
                   className="img-fluid rounded border border-secondary shadow"
                   style={{ width: '96px', height: '96px', objectFit: 'cover' }}
                 />

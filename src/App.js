@@ -200,6 +200,13 @@ class App extends Component {
           />
         );
 
+      case 'payouts':
+        return (
+          <LatestPayoutsPage
+            onNavigate={this.handleNavigate}
+          />
+        );
+
       case 'search':
         return (
           <SearchPage

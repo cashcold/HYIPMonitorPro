@@ -16,6 +16,69 @@ export const sampleCategories = [
 
 export const sampleProjects = [
   {
+    id: 'proj_auradiamond',
+    name: 'Aura Diamond Holdings',
+    domain: 'aura-diamond-holdings.vercel.app',
+    url: 'https://aura-diamond-holdings.vercel.app',
+    logo: '/images/aura_diamond_logo.jpg',
+    banner: '/images/aura_diamond_banner.jpg',
+    status: 'PAYING',
+    category: 'Class "Premium" (TOP Choices)',
+    rating: 5.0,
+    reviewsCount: 3,
+    votes: { excellent: 3, good: 0, average: 0, bad: 0, veryBad: 0 },
+    ourInvestment: 2200,
+    minDeposit: 20,
+    maxDeposit: 2500,
+    roi: 20.00,
+    duration: '5% to 20% total profit (1 - 7 days)',
+    withdrawalType: 'Instant',
+    referralPercent: '5% - 2% - 1%',
+    lastPayoutDate: 'Aug 26, 2026',
+    startDate: '2026-08-26',
+    monitoredDays: 1,
+    monitorsCount: 1,
+    ssl: 'Enterprise Security (Insured)',
+    hosting: 'Vercel / Cloudflare',
+    processors: ['Bitcoin', 'Ethereum', 'USDT TRC20', 'USDT BEP20'],
+    telegram: 'https://t.me/auradiamondholdings',
+    description: 'Aura Diamond Holdings bridges institutional high-carat diamond reserves and cryptographic vaults, delivering steady daily capital growth and liquid commodity contracts to worldwide private investors.',
+    country: 'United Kingdom',
+    company: 'Aura Diamond Holdings Ltd',
+    countryStats: [
+      { country: 'United States', flag: '🇺🇸', votes: 1, percent: 34 },
+      { country: 'United Kingdom', flag: '🇬🇧', votes: 1, percent: 33 },
+      { country: 'Germany', flag: '🇩🇪', votes: 1, percent: 33 }
+    ],
+    investmentPlans: [
+      { name: 'Brilliant Diamond Plan', minDeposit: 20, maxDeposit: 399, roi: '+5% Total Net Profit', duration: '24 Hours', compounding: 'No' },
+      { name: 'Princess Cut Portfolio Plan', minDeposit: 400, maxDeposit: 999, roi: '+12% Total Net Profit', duration: '3 Days', compounding: 'No' },
+      { name: 'Royal Cushion Reserve', minDeposit: 1000, maxDeposit: 1700, roi: '+15% Total Net Profit', duration: '5 Days', compounding: 'No' },
+      { name: 'Imperial Emerald Vault Plan', minDeposit: 1700, maxDeposit: 2500, roi: '+20% Total Net Profit', duration: '7 Days', compounding: 'No' }
+    ],
+    whois: {
+      domain: 'aura-diamond-holdings.vercel.app',
+      ip: 'Unknown',
+      country: 'United Kingdom',
+      registrar: 'Vercel Inc.',
+      created: '2026-08-26',
+      expires: '2027-08-26',
+      updated: '2026-08-26',
+      nameservers: 'ns1.vercel-dns.com, ns2.vercel-dns.com'
+    },
+    payoutHistory: [
+      { date: 'Aug 26, 2026', amount: '$80.00', currency: 'USDT (TRC20)', wallet: 'San***_G', txHash: 'Verified Instant', status: 'Completed' },
+      { date: 'Aug 26, 2026', amount: '$5,000.00', currency: 'Ethereum', wallet: 'Moh***_A', txHash: 'Verified Instant', status: 'Completed' },
+      { date: 'Aug 26, 2026', amount: '$1,000.00', currency: 'Bitcoin', wallet: 'Lar***_S', txHash: 'Verified Instant', status: 'Completed' },
+      { date: 'Aug 26, 2026', amount: '$120.00', currency: 'USDT (TRC20)', wallet: 'Tra***rG', txHash: 'Verified Instant', status: 'Completed' },
+      { date: 'Aug 26, 2026', amount: '$20.00', currency: 'Ethereum', wallet: 'Cry***88', txHash: 'Verified Instant', status: 'Completed' },
+      { date: 'Aug 26, 2026', amount: '$1,500.00', currency: 'Bitcoin', wallet: 'Nod***er', txHash: 'Verified Instant', status: 'Completed' }
+    ],
+    trafficData: [
+      { date: 'Aug 26, 2026', value: 14250 }
+    ]
+  },
+  {
     id: 'proj_goldbod',
     name: 'GoldBod Pro',
     domain: 'gold-bod-pro.vercel.app',
@@ -674,6 +737,54 @@ export const sampleProjects = [
 ];
 
 export const sampleReviews = [
+  {
+    id: 'rev_aura_1',
+    projectId: 'proj_auradiamond',
+    projectName: 'Aura Diamond Holdings',
+    name: 'San***_G',
+    email: 'investor_san@gmail.com',
+    country: 'United States',
+    rating: 5,
+    reviewText: 'Instant withdrawal of $80.00 USDT TRC20 received within seconds! Very impressive project design and solid plans.',
+    paymentAmount: 80.00,
+    wallet: 'TRC20: TGe9***9kL',
+    screenshot: '',
+    status: 'approved',
+    ip: '104.28.*.*',
+    createdAt: '2026-08-26T10:15:00Z'
+  },
+  {
+    id: 'rev_aura_2',
+    projectId: 'proj_auradiamond',
+    projectName: 'Aura Diamond Holdings',
+    name: 'Moh***_A',
+    email: 'moh_invest@outlook.com',
+    country: 'United Kingdom',
+    rating: 5,
+    reviewText: 'Completed 24h Brilliant Diamond Plan, $5,000.00 Ethereum principal + profit credited seamlessly. Highly recommended!',
+    paymentAmount: 5000.00,
+    wallet: '0x88f...921a',
+    screenshot: '',
+    status: 'approved',
+    ip: '86.14.*.*',
+    createdAt: '2026-08-26T11:20:00Z'
+  },
+  {
+    id: 'rev_aura_3',
+    projectId: 'proj_auradiamond',
+    projectName: 'Aura Diamond Holdings',
+    name: 'Lar***_S',
+    email: 'lar_schmidt@web.de',
+    country: 'Germany',
+    rating: 5,
+    reviewText: 'Received $1,000.00 Bitcoin instant payout today. Monitored with genuine proof and great support.',
+    paymentAmount: 1000.00,
+    wallet: 'bc1q9...44k',
+    screenshot: '',
+    status: 'approved',
+    ip: '178.62.*.*',
+    createdAt: '2026-08-26T11:45:00Z'
+  },
   {
     id: 'rev_1',
     projectId: 'proj_winvest',
