@@ -16,6 +16,69 @@ export const sampleCategories = [
 
 export const sampleProjects = [
   {
+  id: 'proj_primegold',
+  name: 'Prime Gold Resources',
+  domain: 'prime-gold-resources.vercel.app',
+  url: 'https://prime-gold-resources.vercel.app',
+  logo: '/images/prime_gold_logo.jpg',
+  banner: '/images/prime_gold_banner.jpg',
+  status: 'PAYING',
+  category: 'Class "Premium" (TOP Choices)',
+  rating: 5.0,
+  reviewsCount: 3,
+  votes: { excellent: 3, good: 0, average: 0, bad: 0, veryBad: 0 },
+  ourInvestment: 2200,
+  minDeposit: 20,
+  maxDeposit: 2500,
+  roi: 20.00,
+  duration: '5% to 20% total profit (1 - 7 days)',
+  withdrawalType: 'Instant',
+  referralPercent: '5% - 2% - 1%',
+  lastPayoutDate: 'Sep 01, 2026',
+  startDate: '2026-08-29',
+  monitoredDays: 3,
+  monitorsCount: 1,
+  ssl: '256-Bit Encrypted (EV SSL)',
+  hosting: 'Vercel / Cloudflare',
+  processors: ['Bitcoin', 'Ethereum', 'USDT TRC20', 'USDT BEP20'],
+  telegram: 'https://t.me/primegoldresources',
+  description: 'Prime Gold Resources is a registered, regulated cryptocurrency cloud mining and algorithmic investment firm headquartered in the United Kingdom, delivering steady daily capital growth and automated liquid contracts to worldwide private investors.',
+  country: 'United Kingdom',
+  company: 'Prime Gold Resources Ltd',
+  countryStats: [
+    { country: 'United States', flag: '🇺🇸', votes: 1, percent: 34 },
+    { country: 'United Kingdom', flag: '🇬🇧', votes: 1, percent: 33 },
+    { country: 'Germany', flag: '🇩🇪', votes: 1, percent: 33 }
+  ],
+  investmentPlans: [
+    { name: 'Starter Plan', minDeposit: 20, maxDeposit: 399, roi: '+5% Total Net Profit', duration: '24 Hours', compounding: 'No' },
+    { name: 'Silver Plan', minDeposit: 400, maxDeposit: 999, roi: '+12% Total Net Profit', duration: '3 Days', compounding: 'No' },
+    { name: 'Gold Plan', minDeposit: 1000, maxDeposit: 1700, roi: '+15% Total Net Profit', duration: '5 Days', compounding: 'No' },
+    { name: 'Diamond Plan', minDeposit: 1700, maxDeposit: 2500, roi: '+20% Total Net Profit', duration: '7 Days', compounding: 'No' }
+  ],
+  whois: {
+    domain: 'prime-gold-resources.vercel.app',
+    ip: 'Unknown',
+    country: 'United Kingdom',
+    registrar: 'Vercel Inc.',
+    created: '2026-08-29',
+    expires: '2027-08-29',
+    updated: '2026-08-29',
+    nameservers: 'ns1.vercel-dns.com, ns2.vercel-dns.com'
+  },
+  payoutHistory: [
+    { date: 'Sep 01, 2026', amount: '$120.00', currency: 'USDT (TRC20)', wallet: 'San***_G', txHash: 'Verified Instant', status: 'Approved' },
+    { date: 'Sep 01, 2026', amount: '$20.00', currency: 'Ethereum', wallet: 'Moh***_A', txHash: 'Verified Instant', status: 'Approved' },
+    { date: 'Aug 31, 2026', amount: '$1,500.00', currency: 'Bitcoin', wallet: 'Lar***_S', txHash: 'Verified Instant', status: 'Approved' },
+    { date: 'Aug 31, 2026', amount: '$250.00', currency: 'USDT (TRC20)', wallet: 'Tra***rG', txHash: 'Verified Instant', status: 'Approved' },
+    { date: 'Aug 30, 2026', amount: '$35.00', currency: 'Ethereum', wallet: 'Cry***88', txHash: 'Verified Instant', status: 'Approved' },
+    { date: 'Aug 29, 2026', amount: '$2,200.00', currency: 'Bitcoin', wallet: 'Nod***er', txHash: 'Verified Instant', status: 'Approved' }
+  ],
+  trafficData: [
+    { date: 'Aug 29, 2026', value: 14250 }
+  ]
+},
+  {
     id: 'proj_auradiamond',
     name: 'Aura Diamond Holdings',
     domain: 'aura-diamond-holdings.vercel.app',
@@ -83,8 +146,8 @@ export const sampleProjects = [
     name: 'GoldBod Pro',
     domain: 'gold-bod-pro.vercel.app',
     url: 'https://gold-bod-pro.vercel.app',
-    logo: 'https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=120&auto=format&fit=crop&q=80',
-    banner: 'https://images.unsplash.com/photo-1642543492481-44e81e3914a7?w=600&auto=format&fit=crop&q=80',
+    logo: '/images/goldbod_logo.jpg',
+    banner: '/images/goldbod_banner.jpg',
     status: 'PAYING',
     category: 'Class "Premium" (TOP Choices)',
     rating: 4.9,
@@ -98,8 +161,8 @@ export const sampleProjects = [
     withdrawalType: 'Instant',
     referralPercent: '10% (First Deposit) / 5% - 2% - 1%',
     lastPayoutDate: getNowDateTimeStr(),
-    startDate: '2026-08-02',
-    monitoredDays: 8,
+    startDate: '2026-08-31',
+    monitoredDays: 1,
     monitorsCount: 1,
     ssl: 'EV SSL',
     hosting: 'Vercel / Cloudflare',
@@ -126,24 +189,21 @@ export const sampleProjects = [
       ip: '76.76.21.21',
       country: 'United States',
       registrar: 'Vercel Inc.',
-      created: '2026-08-02',
-      expires: '2027-08-02',
-      updated: '2026-08-02',
+      created: '2026-08-31',
+      expires: '2027-08-31',
+      updated: '2026-08-31',
       nameservers: 'ns1.vercel-dns.com, ns2.vercel-dns.com'
     },
     payoutHistory: [
-      { date: 'Aug 10, 2026 17:36:12', amount: '$2,880.00', currency: 'USDT TRC20', wallet: 'dubai_vip', txHash: 'Verified Instant', status: 'Completed' },
-      { date: 'Aug 10, 2026 17:36:12', amount: '$3,772.00', currency: 'USDT BEP20', wallet: 'singapore_tx', txHash: 'Verified Instant', status: 'Completed' },
-      { date: 'Aug 10, 2026 17:36:12', amount: '$1,842.00', currency: 'Ethereum', wallet: 'rome_trader', txHash: 'Verified Instant', status: 'Completed' },
-      { date: 'Aug 10, 2026 17:36:12', amount: '$2,712.00', currency: 'Bitcoin', wallet: 'dubai_vip', txHash: 'Verified Instant', status: 'Completed' },
-      { date: 'Aug 10, 2026 17:36:12', amount: '$1,642.00', currency: 'Bitcoin', wallet: 'cyber_sam', txHash: 'Verified Instant', status: 'Completed' }
+      { date: 'Sep 01, 2026 17:36:12', amount: '$2,880.00', currency: 'USDT TRC20', wallet: 'dubai_vip', txHash: 'Verified Instant', status: 'Completed' },
+      { date: 'Sep 01, 2026 17:36:12', amount: '$3,772.00', currency: 'USDT BEP20', wallet: 'singapore_tx', txHash: 'Verified Instant', status: 'Completed' },
+      { date: 'Sep 01, 2026 17:36:12', amount: '$1,842.00', currency: 'Ethereum', wallet: 'rome_trader', txHash: 'Verified Instant', status: 'Completed' },
+      { date: 'Aug 31, 2026 17:36:12', amount: '$2,712.00', currency: 'Bitcoin', wallet: 'dubai_vip', txHash: 'Verified Instant', status: 'Completed' },
+      { date: 'Aug 31, 2026 17:36:12', amount: '$1,642.00', currency: 'Bitcoin', wallet: 'cyber_sam', txHash: 'Verified Instant', status: 'Completed' }
     ],
     trafficData: [
-      { date: 'Aug 02, 2026', value: 1500 },
-      { date: 'Aug 04, 2026', value: 18000 },
-      { date: 'Aug 06, 2026', value: 42000 },
-      { date: 'Aug 08, 2026', value: 85000 },
-      { date: 'Aug 10, 2026', value: 124000 }
+      { date: 'Aug 31, 2026', value: 15000 },
+      { date: 'Sep 01, 2026', value: 85000 }
     ]
   },
   {
@@ -166,8 +226,8 @@ export const sampleProjects = [
   withdrawalType: 'Instant',
   referralPercent: '10% (First Deposit) / 5% - 2% - 1%',
   lastPayoutDate: getNowDateTimeStr(),
-  startDate: '2026-08-02',
-  monitoredDays: 10,
+  startDate: '2026-09-01',
+  monitoredDays: 1,
   monitorsCount: 1,
   ssl: 'EV SSL',
   hosting: 'Cloudflare / CloudMineX Inc',
@@ -198,24 +258,20 @@ export const sampleProjects = [
     ip: '104.21.55.120',
     country: 'United States',
     registrar: 'Cloudflare Inc.',
-    created: '2026-08-02',
-    expires: '2027-08-02',
-    updated: '2026-08-02',
+    created: '2026-09-01',
+    expires: '2027-09-01',
+    updated: '2026-09-01',
     nameservers: 'ns1.cloudflare.com, ns2.cloudflare.com'
   },
   payoutHistory: [
-    { date: 'Aug 12, 2026 14:10:02', amount: 'GHS 350.00', currency: 'MTN MoMo', wallet: 'Kwame', txHash: 'Verified Instant', status: 'Completed' },
-    { date: 'Aug 12, 2026 13:45:10', amount: 'GHS 720.00', currency: 'MTN MoMo', wallet: 'Kofi', txHash: 'Verified Instant', status: 'Completed' },
-    { date: 'Aug 12, 2026 12:20:15', amount: 'GHS 200.00', currency: 'AT Money', wallet: 'Rita', txHash: 'Verified Instant', status: 'Completed' },
-    { date: 'Aug 12, 2026 11:05:40', amount: 'GHS 1,200.00', currency: 'USDT TRC20', wallet: 'Grace', txHash: 'Verified Instant', status: 'Completed' },
-    { date: 'Aug 12, 2026 10:15:22', amount: 'GHS 450.00', currency: 'MTN MoMo', wallet: 'Belinda', txHash: 'Verified Instant', status: 'Completed' }
+    { date: 'Sep 01, 2026 14:10:02', amount: 'GHS 350.00', currency: 'MTN MoMo', wallet: 'Kwame', txHash: 'Verified Instant', status: 'Completed' },
+    { date: 'Sep 01, 2026 13:45:10', amount: 'GHS 720.00', currency: 'MTN MoMo', wallet: 'Kofi', txHash: 'Verified Instant', status: 'Completed' },
+    { date: 'Sep 01, 2026 12:20:15', amount: 'GHS 200.00', currency: 'AT Money', wallet: 'Rita', txHash: 'Verified Instant', status: 'Completed' },
+    { date: 'Sep 01, 2026 11:05:40', amount: 'GHS 1,200.00', currency: 'USDT TRC20', wallet: 'Grace', txHash: 'Verified Instant', status: 'Completed' },
+    { date: 'Sep 01, 2026 10:15:22', amount: 'GHS 450.00', currency: 'MTN MoMo', wallet: 'Belinda', txHash: 'Verified Instant', status: 'Completed' }
   ],
   trafficData: [
-    { date: 'Aug 02, 2026', value: 1500 },
-    { date: 'Aug 04, 2026', value: 18000 },
-    { date: 'Aug 06, 2026', value: 42000 },
-    { date: 'Aug 08, 2026', value: 85000 },
-    { date: 'Aug 10, 2026', value: 124000 }
+    { date: 'Sep 01, 2026', value: 25000 }
   ]
 },
   {

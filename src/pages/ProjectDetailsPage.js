@@ -50,6 +50,24 @@ class ProjectDetailsPage extends Component {
     return project.lastPayoutDate;
   };
 
+  getMonitoredDays = (project) => {
+    if (!project) return 1;
+    if (project.startDate) {
+      const parts = project.startDate.split('-');
+      if (parts.length === 3) {
+        const y = parseInt(parts[0], 10);
+        const m = parseInt(parts[1], 10) - 1;
+        const d = parseInt(parts[2], 10);
+        const startUtc = Date.UTC(y, m, d);
+        const now = this.state.now || new Date();
+        const nowUtc = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+        const diffDays = Math.floor((nowUtc - startUtc) / (1000 * 60 * 60 * 24));
+        return Math.max(1, diffDays);
+      }
+    }
+    return project.monitoredDays || 1;
+  };
+
   componentDidUpdate(prevProps) {
     if (prevProps.projectId !== this.props.projectId) {
       this.loadProjectData();
@@ -197,7 +215,7 @@ class ProjectDetailsPage extends Component {
                   referrerPolicy="no-referrer"
                   onError={(e) => {
                     e.target.onerror = null;
-                    e.target.src = '/images/aura_diamond_logo.jpg';
+                    e.target.style.display = 'none';
                   }}
                   className="img-fluid rounded border border-secondary shadow"
                   style={{ width: '96px', height: '96px', objectFit: 'cover' }}
@@ -214,7 +232,7 @@ class ProjectDetailsPage extends Component {
 
                 <p className="text-info mb-2 small font-monospace d-flex align-items-center gap-2">
                   <i className="bi bi-globe"></i> {project.domain}
-                  <span className="text-muted">• Monitored for <strong>{project.monitoredDays} days</strong> (Since {project.startDate})</span>
+                  <span className="text-muted">• Monitored for <strong>{this.getMonitoredDays(project)} days</strong> (Since {project.startDate})</span>
                 </p>
 
                 <div className="d-flex gap-2 flex-wrap">

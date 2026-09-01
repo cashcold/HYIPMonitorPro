@@ -16,6 +16,30 @@ function getNowDateTimeStr() {
   return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
 }
 
+function computeMonitoredDays(startDate, fallback) {
+  if (!startDate) return fallback || 1;
+  const parts = startDate.split('-');
+  if (parts.length === 3) {
+    const y = parseInt(parts[0], 10);
+    const m = parseInt(parts[1], 10) - 1;
+    const d = parseInt(parts[2], 10);
+    const startUtc = Date.UTC(y, m, d);
+    const now = new Date();
+    const nowUtc = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+    const diff = Math.floor((nowUtc - startUtc) / (1000 * 60 * 60 * 24));
+    return Math.max(1, diff);
+  }
+  return fallback || 1;
+}
+
+function formatProject(p) {
+  if (!p) return p;
+  return {
+    ...p,
+    monitoredDays: computeMonitoredDays(p.startDate, p.monitoredDays)
+  };
+}
+
 class DatabaseService {
   constructor() {
     this.categories = [...sampleCategories];
@@ -112,11 +136,12 @@ class DatabaseService {
       }
     }
 
-    return result;
+    return result.map(formatProject);
   }
 
   getProjectById(id) {
-    return this.projects.find(p => p.id === id || p.domain === id);
+    const project = this.projects.find(p => p.id === id || p.domain === id);
+    return project ? formatProject(project) : null;
   }
 
   addProject(data) {

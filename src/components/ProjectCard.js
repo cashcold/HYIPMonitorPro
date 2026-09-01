@@ -28,6 +28,24 @@ class ProjectCard extends Component {
     return project.lastPayoutDate;
   }
 
+  getMonitoredDays(project) {
+    if (!project) return 1;
+    if (project.startDate) {
+      const parts = project.startDate.split('-');
+      if (parts.length === 3) {
+        const y = parseInt(parts[0], 10);
+        const m = parseInt(parts[1], 10) - 1;
+        const d = parseInt(parts[2], 10);
+        const startUtc = Date.UTC(y, m, d);
+        const now = this.state.now || new Date();
+        const nowUtc = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+        const diffDays = Math.floor((nowUtc - startUtc) / (1000 * 60 * 60 * 24));
+        return Math.max(1, diffDays);
+      }
+    }
+    return project.monitoredDays || 1;
+  }
+
   getStatusBadgeClass(status) {
     switch (status) {
       case 'PAYING':
@@ -216,7 +234,9 @@ class ProjectCard extends Component {
                 referrerPolicy="no-referrer"
                 onError={(e) => {
                   e.target.onerror = null;
-                  e.target.src = '/images/aura_diamond_banner.jpg';
+                  if (project.logo && e.target.src !== project.logo) {
+                    e.target.src = project.logo;
+                  }
                 }}
                 className="img-fluid rounded border border-slate-700 shadow-sm"
                 style={{ maxHeight: '70px', width: '100%', objectFit: 'cover' }}
@@ -270,7 +290,7 @@ class ProjectCard extends Component {
           </div>
 
           <div className="small text-muted d-flex align-items-center gap-2">
-            <span>Since: <strong className="text-light">{project.startDate}</strong> ({project.monitoredDays}d)</span>
+            <span>Since: <strong className="text-light">{project.startDate}</strong> ({this.getMonitoredDays(project)}d)</span>
             <span className="badge bg-success bg-opacity-20 text-success border border-success border-opacity-30 rounded-pill">Monitors: {project.monitorsCount || 1}</span>
           </div>
         </div>
