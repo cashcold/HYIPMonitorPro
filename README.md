@@ -19,9 +19,17 @@ Production-Ready MERN Stack High-Yield Investment Program (HYIP) Monitoring & Ve
 ## 🛠 Tech Stack
 
 - **Frontend**: React (Class Components ONLY), Bootstrap 5, Bootstrap Icons, Tailwind CSS
-- **Backend**: Node.js, Express.js REST API
+- **Backend & Serverless API**: Node.js, Express.js Serverless Functions (`/api`), native Vercel configuration (`vercel.json`)
 - **Database**: MongoDB / Mongoose schema support with auto-seeding sample database fallback
-- **File Uploads**: Express static `/uploads` service
+- **File Uploads**: Base64 & static uploads service with serverless fallbacks
+
+## ☁️ Vercel Serverless Deployment
+
+Deploy seamlessly to Vercel with zero extra configuration:
+1. Push this repository to GitHub/GitLab or run `vercel` via CLI.
+2. Vercel automatically detects Vite and builds the client-side SPA to `dist/`.
+3. The API endpoints in `/api/` run serverlessly on Vercel Functions.
+4. Route rewrites in `vercel.json` map `/api/*` to the serverless function and route all client URLs to the single-page application.
 
 ## 💻 Quick Start
 

@@ -30,6 +30,18 @@ npm install
 - **Production Build**: `npm run build` (Bundles frontend static files into `dist/` and compiles server to `dist/server.cjs`)
 - **Start Production**: `npm start` (Launches `node dist/server.cjs`)
 
-### 5. Accessing the Admin Panel
+### 5. Deploying to Vercel (Serverless API & SPA)
+
+This application is ready for 1-click Vercel deployment:
+- **Root Directory**: `./`
+- **Framework Preset**: `Vite`
+- **Build Command**: `npm run build` or `vite build`
+- **Output Directory**: `dist`
+- **Serverless Functions**: Automatically detected in `/api` (configured via `vercel.json`)
+- **Environment Variables**:
+  - `NODE_ENV=production`
+  - `MONGODB_URI` (optional: connect your cloud MongoDB Atlas database, or leave blank to use the in-memory database with preloaded sample data)
+
+### 6. Accessing the Admin Panel
 1. Click **Admin Panel** in the top navigation header.
 2. Manage Projects, approve reviews, review scam reports, update banner ads, or configure site settings.
