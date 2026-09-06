@@ -1,28 +1,70 @@
 // API Service for HYIP Monitor Pro Frontend
+import { fallbackProjects, fallbackStats } from './fallbackData.js';
 
 // Dynamically use environment variable or fallback to relative /api
 const BACKEND_URL = import.meta.env.VITE_API_URL || '';
 const API_BASE = BACKEND_URL ? `${BACKEND_URL}/api` : '/api';
 
 export async function fetchStats() {
-  const res = await fetch(`${API_BASE}/statistics`);
-  const json = await res.json();
-  return json.data;
+  try {
+    const res = await fetch(`${API_BASE}/statistics`);
+    const contentType = res.headers.get('content-type') || '';
+    if (res.ok && contentType.includes('application/json')) {
+      const json = await res.json();
+      if (json.data) return json.data;
+    }
+  } catch (err) {
+    console.warn('Backend /api/statistics offline or unreachable, using default stats:', err);
+  }
+  return fallbackStats;
 }
 
 export async function fetchProjects(params = {}) {
-  const query = new URLSearchParams(params).toString();
-  const url = `${API_BASE}/projects${query ? `?${query}` : ''}`;
-  const res = await fetch(url);
-  const json = await res.json();
-  return json.data || [];
+  try {
+    const query = new URLSearchParams(params).toString();
+    const url = `${API_BASE}/projects${query ? `?${query}` : ''}`;
+    const res = await fetch(url);
+    const contentType = res.headers.get('content-type') || '';
+    // Guard against Netlify SPA returning HTML index page on unmatched routes
+    if (res.ok && contentType.includes('application/json')) {
+      const json = await res.json();
+      if (json.data && Array.isArray(json.data) && json.data.length > 0) {
+        return json.data;
+      }
+    }
+  } catch (err) {
+    console.warn('Backend /api/projects offline or unreachable, using default projects:', err);
+  }
+
+  // Graceful fallback for static client deployments (e.g. Netlify)
+  let list = [...fallbackProjects];
+  if (params.status) {
+    list = list.filter(p => p.status.toUpperCase() === params.status.toUpperCase());
+  }
+  if (params.category) {
+    list = list.filter(p => p.category.toLowerCase().includes(params.category.toLowerCase()));
+  }
+  if (params.q) {
+    const q = params.q.toLowerCase();
+    list = list.filter(p => p.name.toLowerCase().includes(q) || p.domain.toLowerCase().includes(q));
+  }
+  return list;
 }
 
 export async function fetchProjectById(id) {
-  const res = await fetch(`${API_BASE}/projects/${id}`);
-  const json = await res.json();
-  if (!json.success) throw new Error(json.error);
-  return json.data;
+  try {
+    const res = await fetch(`${API_BASE}/projects/${id}`);
+    const contentType = res.headers.get('content-type') || '';
+    if (res.ok && contentType.includes('application/json')) {
+      const json = await res.json();
+      if (json.success && json.data) return json.data;
+    }
+  } catch (err) {
+    console.warn(`Could not fetch project ${id} from API, checking fallback list:`, err);
+  }
+  const found = fallbackProjects.find(p => p.id === id);
+  if (found) return found;
+  throw new Error('Project not found');
 }
 
 export async function createProject(projectData) {
@@ -60,40 +102,7 @@ export async function deleteProject(id) {
     method: 'DELETE'
   });
   const json = await res.json();
-  return json.success;
-}
-
-export async function fetchReviews(projectId = '') {
-  const url = projectId ? `${API_BASE}/reviews?projectId=${projectId}` : `${API_BASE}/reviews`;
-  const res = await fetch(url);
-  const json = await res.json();
-  return json.data || [];
-}
-
-export async function submitReview(reviewData) {
-  const res = await fetch(`${API_BASE}/reviews`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(reviewData)
-  });
-  const json = await res.json();
-  return json.data;
-}
-
-export async function fetchComments(projectId) {
-  const res = await fetch(`${API_BASE}/comments?projectId=${projectId}`);
-  const json = await res.json();
-  return json.data || [];
-}
-
-export async function submitComment(commentData) {
-  const res = await fetch(`${API_BASE}/comments`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(commentData)
-  });
-  const json = await res.json();
-  return json.data;
+  return json;
 }
 
 export async function submitVote(projectId, voteType) {
@@ -106,16 +115,87 @@ export async function submitVote(projectId, voteType) {
   return json.data;
 }
 
-export async function fetchLatestPayouts() {
-  const res = await fetch(`${API_BASE}/latest-payouts`);
+export async function submitReview(reviewData) {
+  const res = await fetch(`${API_BASE}/reviews`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(reviewData)
+  });
   const json = await res.json();
-  return json.data || [];
+  return json.data;
+}
+
+export async function fetchReviews(projectId) {
+  try {
+    const res = await fetch(`${API_BASE}/reviews?projectId=${projectId}`);
+    const contentType = res.headers.get('content-type') || '';
+    if (res.ok && contentType.includes('application/json')) {
+      const json = await res.json();
+      return json.data || [];
+    }
+  } catch {
+    // fallback empty
+  }
+  return [];
+}
+
+export async function submitComment(commentData) {
+  const res = await fetch(`${API_BASE}/comments`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(commentData)
+  });
+  const json = await res.json();
+  return json.data;
+}
+
+export async function fetchComments(projectId) {
+  try {
+    const res = await fetch(`${API_BASE}/comments?projectId=${projectId}`);
+    const contentType = res.headers.get('content-type') || '';
+    if (res.ok && contentType.includes('application/json')) {
+      const json = await res.json();
+      return json.data || [];
+    }
+  } catch {
+    // fallback empty
+  }
+  return [];
+}
+
+export async function fetchLatestPayouts() {
+  try {
+    const res = await fetch(`${API_BASE}/latest-payouts`);
+    const contentType = res.headers.get('content-type') || '';
+    if (res.ok && contentType.includes('application/json')) {
+      const json = await res.json();
+      return json.data || [];
+    }
+  } catch {
+    // fallback
+  }
+  return fallbackProjects.filter(p => p.status === 'PAYING').map(p => ({
+    id: `pay_${p.id}`,
+    projectName: p.name,
+    amount: (p.ourInvestment * 0.05).toFixed(2),
+    currency: 'USDT',
+    batch: `TXN${Math.floor(10000000 + Math.random() * 90000000)}`,
+    time: p.lastPayoutDate || 'Today'
+  }));
 }
 
 export async function fetchLatestScams() {
-  const res = await fetch(`${API_BASE}/latest-scams`);
-  const json = await res.json();
-  return json.data || [];
+  try {
+    const res = await fetch(`${API_BASE}/latest-scams`);
+    const contentType = res.headers.get('content-type') || '';
+    if (res.ok && contentType.includes('application/json')) {
+      const json = await res.json();
+      return json.data || [];
+    }
+  } catch {
+    // fallback
+  }
+  return fallbackProjects.filter(p => p.status === 'SCAM' || p.status === 'PROBLEM');
 }
 
 export async function submitReport(reportData) {
@@ -129,15 +209,31 @@ export async function submitReport(reportData) {
 }
 
 export async function fetchReports() {
-  const res = await fetch(`${API_BASE}/reports`);
-  const json = await res.json();
-  return json.data || [];
+  try {
+    const res = await fetch(`${API_BASE}/reports`);
+    const contentType = res.headers.get('content-type') || '';
+    if (res.ok && contentType.includes('application/json')) {
+      const json = await res.json();
+      return json.data || [];
+    }
+  } catch {
+    // fallback
+  }
+  return [];
 }
 
 export async function fetchAdvertisements() {
-  const res = await fetch(`${API_BASE}/advertisements`);
-  const json = await res.json();
-  return json.data || [];
+  try {
+    const res = await fetch(`${API_BASE}/advertisements`);
+    const contentType = res.headers.get('content-type') || '';
+    if (res.ok && contentType.includes('application/json')) {
+      const json = await res.json();
+      return json.data || [];
+    }
+  } catch {
+    // fallback
+  }
+  return [];
 }
 
 export async function createAdvertisement(adData) {
@@ -151,9 +247,17 @@ export async function createAdvertisement(adData) {
 }
 
 export async function fetchSettings() {
-  const res = await fetch(`${API_BASE}/settings`);
-  const json = await res.json();
-  return json.data;
+  try {
+    const res = await fetch(`${API_BASE}/settings`);
+    const contentType = res.headers.get('content-type') || '';
+    if (res.ok && contentType.includes('application/json')) {
+      const json = await res.json();
+      return json.data;
+    }
+  } catch {
+    // fallback
+  }
+  return null;
 }
 
 export async function updateSettings(settings) {
