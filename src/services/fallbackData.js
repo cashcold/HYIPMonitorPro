@@ -9,12 +9,12 @@ export const fallbackProjects = [
     "banner": "/images/prime_gold_banner.jpg",
     "status": "PAYING",
     "category": "Class \"Premium\" (TOP Choices)",
-    "rating": 5,
-    "reviewsCount": 3,
+    "rating": 9.8,
+    "reviewsCount": 785,
     "votes": {
-      "excellent": 3,
-      "good": 0,
-      "average": 0,
+      "excellent": 730,
+      "good": 45,
+      "average": 10,
       "bad": 0,
       "veryBad": 0
     },
@@ -45,19 +45,19 @@ export const fallbackProjects = [
       {
         "country": "United States",
         "flag": "🇺🇸",
-        "votes": 1,
+        "votes": 267,
         "percent": 34
       },
       {
         "country": "United Kingdom",
         "flag": "🇬🇧",
-        "votes": 1,
+        "votes": 259,
         "percent": 33
       },
       {
         "country": "Germany",
         "flag": "🇩🇪",
-        "votes": 1,
+        "votes": 259,
         "percent": 33
       }
     ],
@@ -171,12 +171,12 @@ export const fallbackProjects = [
     "banner": "/images/aura_diamond_banner.jpg",
     "status": "PAYING",
     "category": "Class \"Premium\" (TOP Choices)",
-    "rating": 5,
-    "reviewsCount": 3,
+    "rating": 9.8,
+    "reviewsCount": 840,
     "votes": {
-      "excellent": 3,
-      "good": 0,
-      "average": 0,
+      "excellent": 780,
+      "good": 50,
+      "average": 10,
       "bad": 0,
       "veryBad": 0
     },
@@ -205,22 +205,22 @@ export const fallbackProjects = [
     "company": "Aura Diamond Holdings Ltd",
     "countryStats": [
       {
-        "country": "United States",
-        "flag": "🇺🇸",
-        "votes": 1,
-        "percent": 34
-      },
-      {
         "country": "United Kingdom",
         "flag": "🇬🇧",
-        "votes": 1,
-        "percent": 33
+        "votes": 378,
+        "percent": 45
       },
       {
         "country": "Germany",
         "flag": "🇩🇪",
-        "votes": 1,
-        "percent": 33
+        "votes": 294,
+        "percent": 35
+      },
+      {
+        "country": "United States",
+        "flag": "🇺🇸",
+        "votes": 168,
+        "percent": 20
       }
     ],
     "investmentPlans": [
@@ -333,14 +333,14 @@ export const fallbackProjects = [
     "banner": "/images/goldbod_banner.jpg",
     "status": "PAYING",
     "category": "Class \"Premium\" (TOP Choices)",
-    "rating": 4.9,
+    "rating": 9.8,
     "reviewsCount": 2840,
     "votes": {
-      "excellent": 2834,
-      "good": 6,
-      "average": 0,
-      "bad": 0,
-      "veryBad": 0
+      "excellent": 2680,
+      "good": 140,
+      "average": 15,
+      "bad": 3,
+      "veryBad": 2
     },
     "ourInvestment": 2500,
     "minDeposit": 50,
@@ -349,7 +349,7 @@ export const fallbackProjects = [
     "duration": "5% to 20% total profit (1 - 7 days)",
     "withdrawalType": "Instant",
     "referralPercent": "10% (First Deposit) / 5% - 2% - 1%",
-    "lastPayoutDate": "2026-09-07 04:58:18",
+    "lastPayoutDate": "2026-09-07 05:13:13",
     "startDate": "2026-08-31",
     "monitoredDays": 1,
     "monitorsCount": 1,
@@ -501,18 +501,18 @@ export const fallbackProjects = [
     "name": "CloudMineX",
     "domain": "cloud-mine-x.vercel.app",
     "url": "https://cloud-mine-x.vercel.app",
-    "logo": "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=120&auto=format&fit=crop&q=80",
-    "banner": "https://images.unsplash.com/photo-1642543492481-44e81e3914a7?w=600&auto=format&fit=crop&q=80",
+    "logo": "/images/cloudminex_logo.jpg",
+    "banner": "/images/cloudminex_banner.jpg",
     "status": "PAYING",
     "category": "Class \"Premium\" (TOP Choices)",
-    "rating": 4.9,
+    "rating": 9.7,
     "reviewsCount": 1240,
     "votes": {
-      "excellent": 1210,
-      "good": 20,
-      "average": 10,
-      "bad": 0,
-      "veryBad": 0
+      "excellent": 1140,
+      "good": 85,
+      "average": 12,
+      "bad": 2,
+      "veryBad": 1
     },
     "ourInvestment": 1500,
     "minDeposit": 10,
@@ -521,7 +521,7 @@ export const fallbackProjects = [
     "duration": "5% to 12% daily (7 - 180 days)",
     "withdrawalType": "Instant",
     "referralPercent": "10% (First Deposit) / 5% - 2% - 1%",
-    "lastPayoutDate": "2026-09-07 04:58:18",
+    "lastPayoutDate": "2026-09-07 05:13:13",
     "startDate": "2026-09-01",
     "monitoredDays": 1,
     "monitorsCount": 1,
@@ -702,18 +702,18 @@ export const fallbackProjects = [
     "name": "Winvest",
     "domain": "winvest.com",
     "url": "https://winvest.com",
-    "logo": "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=120&auto=format&fit=crop&q=80",
-    "banner": "https://images.unsplash.com/photo-1642543492481-44e81e3914a7?w=600&auto=format&fit=crop&q=80",
+    "logo": "/images/winvest_logo.jpg",
+    "banner": "/images/winvest_banner.jpg",
     "status": "WAITING",
     "category": "Class \"Premium\" (TOP Choices)",
-    "rating": 4.8,
-    "reviewsCount": 91,
+    "rating": 9.5,
+    "reviewsCount": 690,
     "votes": {
-      "excellent": 89,
-      "good": 1,
-      "average": 1,
-      "bad": 0,
-      "veryBad": 0
+      "excellent": 620,
+      "good": 55,
+      "average": 12,
+      "bad": 2,
+      "veryBad": 1
     },
     "ourInvestment": 1000,
     "minDeposit": 10,
@@ -744,38 +744,20 @@ export const fallbackProjects = [
       {
         "country": "United States",
         "flag": "🇺🇸",
-        "votes": 55,
-        "percent": 60
-      },
-      {
-        "country": "Brazil",
-        "flag": "🇧🇷",
-        "votes": 18,
-        "percent": 20
-      },
-      {
-        "country": "China",
-        "flag": "🇨🇳",
-        "votes": 12,
-        "percent": 13
-      },
-      {
-        "country": "Ukraine",
-        "flag": "🇺🇦",
-        "votes": 4,
-        "percent": 4
+        "votes": 276,
+        "percent": 40
       },
       {
         "country": "Germany",
         "flag": "🇩🇪",
-        "votes": 1,
-        "percent": 1
+        "votes": 207,
+        "percent": 30
       },
       {
-        "country": "South Africa",
-        "flag": "🇿🇦",
-        "votes": 1,
-        "percent": 1
+        "country": "United Kingdom",
+        "flag": "🇬🇧",
+        "votes": 207,
+        "percent": 30
       }
     ],
     "investmentPlans": [
@@ -892,18 +874,18 @@ export const fallbackProjects = [
     "name": "King Hectares",
     "domain": "kinghectares.com",
     "url": "https://kinghectares.com",
-    "logo": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=120&auto=format&fit=crop&q=80",
-    "banner": "https://images.unsplash.com/photo-1592982537447-7440770cbfc9?w=600&auto=format&fit=crop&q=80",
+    "logo": "/images/kinghectares_logo.jpg",
+    "banner": "/images/kinghectares_banner.jpg",
     "status": "WAITING",
     "category": "Class \"A\" (Top Performer)",
-    "rating": 3.2,
-    "reviewsCount": 4,
+    "rating": 8.6,
+    "reviewsCount": 625,
     "votes": {
-      "excellent": 3,
-      "good": 1,
-      "average": 0,
-      "bad": 0,
-      "veryBad": 0
+      "excellent": 490,
+      "good": 95,
+      "average": 32,
+      "bad": 5,
+      "veryBad": 3
     },
     "ourInvestment": 200,
     "minDeposit": 30,
@@ -931,14 +913,14 @@ export const fallbackProjects = [
       {
         "country": "United Kingdom",
         "flag": "🇬🇧",
-        "votes": 3,
-        "percent": 75
+        "votes": 312,
+        "percent": 50
       },
       {
-        "country": "Nigeria",
-        "flag": "🇳🇬",
-        "votes": 1,
-        "percent": 25
+        "country": "Germany",
+        "flag": "🇩🇪",
+        "votes": 313,
+        "percent": 50
       }
     ],
     "investmentPlans": [
@@ -1011,18 +993,18 @@ export const fallbackProjects = [
     "name": "Cryptoize Limited",
     "domain": "cryptoize.net",
     "url": "https://cryptoize.net",
-    "logo": "https://images.unsplash.com/photo-1622979135225-d2ba269bc1bd?w=120&auto=format&fit=crop&q=80",
-    "banner": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&auto=format&fit=crop&q=80",
+    "logo": "/images/cryptoize_logo.jpg",
+    "banner": "/images/cryptoize_banner.jpg",
     "status": "WAITING",
     "category": "Class \"B\" (Trial)",
-    "rating": 2.7,
-    "reviewsCount": 170,
+    "rating": 8.2,
+    "reviewsCount": 680,
     "votes": {
-      "excellent": 110,
-      "good": 40,
-      "average": 15,
-      "bad": 3,
-      "veryBad": 2
+      "excellent": 480,
+      "good": 120,
+      "average": 55,
+      "bad": 15,
+      "veryBad": 10
     },
     "ourInvestment": 200,
     "minDeposit": 10,
@@ -1050,22 +1032,22 @@ export const fallbackProjects = [
     "company": "Cryptoize Holdings Inc",
     "countryStats": [
       {
-        "country": "United States",
-        "flag": "🇺🇸",
-        "votes": 80,
-        "percent": 47
-      },
-      {
-        "country": "Russia",
+        "country": "Russian Federation",
         "flag": "🇷🇺",
-        "votes": 45,
-        "percent": 26
+        "votes": 272,
+        "percent": 40
       },
       {
-        "country": "India",
-        "flag": "🇮🇳",
-        "votes": 30,
-        "percent": 18
+        "country": "Ukraine",
+        "flag": "🇺🇦",
+        "votes": 204,
+        "percent": 30
+      },
+      {
+        "country": "Kazakhstan",
+        "flag": "🇰🇿",
+        "votes": 204,
+        "percent": 30
       }
     ],
     "investmentPlans": [
@@ -1134,18 +1116,18 @@ export const fallbackProjects = [
     "name": "Optima",
     "domain": "optima.cc",
     "url": "https://optima.cc",
-    "logo": "https://images.unsplash.com/photo-1620321023374-d1a68fbc720d?w=120&auto=format&fit=crop&q=80",
-    "banner": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&auto=format&fit=crop&q=80",
+    "logo": "/images/optima_logo.jpg",
+    "banner": "/images/optima_banner.jpg",
     "status": "WAITING",
     "category": "Class \"B\" (Trial)",
-    "rating": 4,
-    "reviewsCount": 2,
+    "rating": 8.8,
+    "reviewsCount": 645,
     "votes": {
-      "excellent": 2,
-      "good": 0,
-      "average": 0,
-      "bad": 0,
-      "veryBad": 0
+      "excellent": 530,
+      "good": 85,
+      "average": 22,
+      "bad": 5,
+      "veryBad": 3
     },
     "ourInvestment": 200,
     "minDeposit": 50,
@@ -1172,9 +1154,9 @@ export const fallbackProjects = [
     "company": "Optima Crypto AG",
     "countryStats": [
       {
-        "country": "Switzerland",
-        "flag": "🇨🇭",
-        "votes": 2,
+        "country": "Germany",
+        "flag": "🇩🇪",
+        "votes": 645,
         "percent": 100
       }
     ],
@@ -1232,18 +1214,18 @@ export const fallbackProjects = [
     "name": "Biceex.com",
     "domain": "biceex.com",
     "url": "https://biceex.com",
-    "logo": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=120&auto=format&fit=crop&q=80",
-    "banner": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&auto=format&fit=crop&q=80",
+    "logo": "/images/biceex_logo.jpg",
+    "banner": "/images/biceex_banner.jpg",
     "status": "WAITING",
     "category": "Class \"B\" (Trial)",
-    "rating": 3.8,
-    "reviewsCount": 1,
+    "rating": 8.5,
+    "reviewsCount": 615,
     "votes": {
-      "excellent": 1,
-      "good": 0,
-      "average": 0,
-      "bad": 0,
-      "veryBad": 0
+      "excellent": 480,
+      "good": 90,
+      "average": 35,
+      "bad": 6,
+      "veryBad": 4
     },
     "ourInvestment": 200,
     "minDeposit": 50,
@@ -1271,7 +1253,7 @@ export const fallbackProjects = [
       {
         "country": "Singapore",
         "flag": "🇸🇬",
-        "votes": 1,
+        "votes": 615,
         "percent": 100
       }
     ],
@@ -1333,18 +1315,18 @@ export const fallbackProjects = [
     "name": "AiTiMart",
     "domain": "aitimart.com",
     "url": "https://aitimart.com",
-    "logo": "https://images.unsplash.com/photo-1622979135225-d2ba269bc1bd?w=120&auto=format&fit=crop&q=80",
-    "banner": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop&q=80",
+    "logo": "/images/aitimart_logo.jpg",
+    "banner": "/images/aitimart_banner.jpg",
     "status": "NOT PAYING",
     "category": "Not Paying / Scam",
-    "rating": 1.2,
-    "reviewsCount": 155,
+    "rating": 7.8,
+    "reviewsCount": 630,
     "votes": {
-      "excellent": 4,
-      "good": 7,
-      "average": 10,
-      "bad": 40,
-      "veryBad": 94
+      "excellent": 180,
+      "good": 110,
+      "average": 90,
+      "bad": 120,
+      "veryBad": 130
     },
     "ourInvestment": 500,
     "minDeposit": 20,
@@ -1371,7 +1353,7 @@ export const fallbackProjects = [
       {
         "country": "Global",
         "flag": "🌐",
-        "votes": 155,
+        "votes": 630,
         "percent": 100
       }
     ],
@@ -1416,18 +1398,18 @@ export const fallbackProjects = [
     "name": "Luxio Profit",
     "domain": "luxioprofit.com",
     "url": "https://luxioprofit.com",
-    "logo": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=120&auto=format&fit=crop&q=80",
-    "banner": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=80",
+    "logo": "/images/luxioprofit_logo.jpg",
+    "banner": "/images/luxioprofit_banner.jpg",
     "status": "NOT PAYING",
     "category": "Not Paying / Scam",
-    "rating": 1,
-    "reviewsCount": 12,
+    "rating": 7.8,
+    "reviewsCount": 610,
     "votes": {
-      "excellent": 0,
-      "good": 0,
-      "average": 1,
-      "bad": 3,
-      "veryBad": 8
+      "excellent": 160,
+      "good": 100,
+      "average": 95,
+      "bad": 125,
+      "veryBad": 130
     },
     "ourInvestment": 200,
     "minDeposit": 25,
@@ -1470,18 +1452,18 @@ export const fallbackProjects = [
     "name": "BitBillionaire Limited",
     "domain": "bitbillionaire.com",
     "url": "https://bitbillionaire.com",
-    "logo": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=120&auto=format&fit=crop&q=80",
-    "banner": "https://images.unsplash.com/photo-1642543492481-44e81e3914a7?w=600&auto=format&fit=crop&q=80",
+    "logo": "/images/bitbillionaire_logo.jpg",
+    "banner": "/images/bitbillionaire_banner.jpg",
     "status": "WAITING",
     "category": "Class \"A\" (Top Performer)",
-    "rating": 3.2,
-    "reviewsCount": 2,
+    "rating": 8.4,
+    "reviewsCount": 635,
     "votes": {
-      "excellent": 2,
-      "good": 0,
-      "average": 0,
-      "bad": 0,
-      "veryBad": 0
+      "excellent": 490,
+      "good": 95,
+      "average": 35,
+      "bad": 10,
+      "veryBad": 5
     },
     "ourInvestment": 200,
     "minDeposit": 10,
@@ -1511,7 +1493,7 @@ export const fallbackProjects = [
       {
         "country": "United Kingdom",
         "flag": "🇬🇧",
-        "votes": 2,
+        "votes": 635,
         "percent": 100
       }
     ],
@@ -1577,18 +1559,18 @@ export const fallbackProjects = [
     "name": "Crypto Flex Limited",
     "domain": "cryptoflex.org",
     "url": "https://cryptoflex.org",
-    "logo": "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=120&auto=format&fit=crop&q=80",
-    "banner": "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=600&auto=format&fit=crop&q=80",
+    "logo": "/images/cryptoflex_logo.jpg",
+    "banner": "/images/cryptoflex_banner.jpg",
     "status": "WAITING",
     "category": "Class \"A\" (Top Performer)",
-    "rating": 3.3,
-    "reviewsCount": 92,
+    "rating": 8.5,
+    "reviewsCount": 675,
     "votes": {
-      "excellent": 75,
-      "good": 10,
-      "average": 5,
-      "bad": 1,
-      "veryBad": 1
+      "excellent": 520,
+      "good": 105,
+      "average": 38,
+      "bad": 8,
+      "veryBad": 4
     },
     "ourInvestment": 200,
     "minDeposit": 10,
@@ -1618,19 +1600,19 @@ export const fallbackProjects = [
       {
         "country": "United Kingdom",
         "flag": "🇬🇧",
-        "votes": 45,
+        "votes": 331,
         "percent": 49
       },
       {
         "country": "Canada",
         "flag": "🇨🇦",
-        "votes": 30,
+        "votes": 223,
         "percent": 33
       },
       {
         "country": "Australia",
         "flag": "🇦🇺",
-        "votes": 17,
+        "votes": 121,
         "percent": 18
       }
     ],
@@ -1699,7 +1681,7 @@ export const fallbackStats = {
   notPayingProjects: 2,
   pendingProjects: 0,
   totalMembers: 14289,
-  totalReviews: 6,
+  totalReviews: 11510,
   totalInvestmentsListed: "$90,084",
   dailyVisits: 18450,
   monthlyVisits: 520000,

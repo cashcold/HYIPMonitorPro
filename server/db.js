@@ -63,7 +63,7 @@ class DatabaseService {
     const payingProjects = activeProjects.filter(p => p.status === 'PAYING').length;
     const notPayingProjects = activeProjects.filter(p => p.status === 'NOT PAYING' || p.status === 'SCAM').length;
     const pendingProjects = this.projects.filter(p => p.approved === false || p.status === 'PENDING').length;
-    const totalReviews = this.reviews.length;
+    const totalReviews = this.projects.reduce((sum, p) => sum + (p.reviewsCount || 0), 0) || this.reviews.length;
     const totalInvestmentsListed = '$90,084';
     const totalMembers = 14289;
 

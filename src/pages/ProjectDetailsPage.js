@@ -455,7 +455,7 @@ class ProjectDetailsPage extends Component {
                           </div>
                         </div>
                         <span className="text-warning fw-bold">
-                          {'★'.repeat(r.rating)}{'☆'.repeat(5 - r.rating)}
+                          {'★'.repeat(Math.min(5, Math.max(0, r.rating || 5)))}{'☆'.repeat(Math.max(0, 5 - (r.rating || 5)))}
                         </span>
                       </div>
 

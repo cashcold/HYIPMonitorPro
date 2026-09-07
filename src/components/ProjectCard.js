@@ -125,8 +125,20 @@ class ProjectCard extends Component {
         {/* Bento Header Row */}
         <div className="p-3 bg-slate-900 border-bottom border-slate-800 d-flex flex-wrap align-items-center justify-content-between gap-2">
           <div className="d-flex align-items-center gap-2">
-            <div className="bg-slate-800 border border-slate-700 rounded-circle text-info d-flex align-items-center justify-content-center" style={{ width: '32px', height: '32px' }}>
-              <i className="bi bi-shield-check"></i>
+            <div className="bg-slate-800 border border-slate-700 rounded-circle text-info d-flex align-items-center justify-content-center overflow-hidden flex-shrink-0" style={{ width: '32px', height: '32px' }}>
+              {project.logo ? (
+                <img
+                  src={project.logo}
+                  alt={project.name}
+                  referrerPolicy="no-referrer"
+                  className="w-100 h-100 object-fit-cover rounded-circle"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                  }}
+                />
+              ) : (
+                <i className="bi bi-shield-check"></i>
+              )}
             </div>
             <button
               className="btn btn-link p-0 text-info fw-extrabold fs-5 text-decoration-none"
