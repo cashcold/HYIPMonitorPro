@@ -4,8 +4,8 @@ import fs from 'fs';
 import { createServer as createViteServer } from 'vite';
 import app from './server/app.js';
 
-// Port configuration (Vercel/Heroku/Cloud Run or 3000 default)
-const PORT = process.env.PORT || 3000;
+// Port configuration: Port 3000 is required for container proxy
+const PORT = 3000;
 
 // --- VITE MIDDLEWARE FOR DEV & STATIC SERVING FOR PRODUCTION ---
 async function startServer() {
