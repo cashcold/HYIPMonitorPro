@@ -117,14 +117,16 @@ class Header extends Component {
           </div>
 
           <div className="d-flex align-items-center gap-3">
-            <a
-              href="https://chat.whatsapp.com/KJ1R8WcP2yk3jtcxym1nsS?s=cl&p=a&ilr=1"
-              target="_blank"
-              rel="noreferrer"
-              className="text-success text-decoration-none small d-flex align-items-center gap-1 fw-bold"
-            >
-              <i className="bi bi-whatsapp"></i> WhatsApp Group
-            </a>
+             <a
+                href="https://t.me/hyipexplorerpro"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded bg-[#0088cc] hover:bg-[#0077b5] text-white cursor-pointer transition-colors shadow-xs"
+                title="Contact Support on Telegram"
+              >
+                <Send className="w-3 h-3 -rotate-45" />
+                <span className="hidden sm:inline">Telegram</span>
+              </a>
             <span className="text-muted">|</span>
             <button
               onClick={() => onNavigate('contact')}
