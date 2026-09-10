@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Send } from 'lucide-react';
 
 class Header extends Component {
   constructor(props) {
