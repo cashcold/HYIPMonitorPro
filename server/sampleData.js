@@ -1890,7 +1890,8 @@ export const sampleSettings = {
   "serverTimezone": "UTC",
   "autoApproveReviews": false,
   "minDepositAlert": 10,
-  "whatsappGroup": "https://chat.whatsapp.com/KJ1R8WcP2yk3jtcxym1nsS?s=cl&p=a&ilr=1",
+  "telegramAdmin": "https://t.me/hyipexplorerpro",
+  "telegramGroup": "https://t.me/+Qd3n1TDjVbs4M2Q0",
   "supportEmail": "support@hyipmonitorpro.com",
   "announcementText": "Welcome to HYIP Monitor Pro — The #1 Trusted Associate & High-Yield Investment Program Tracking Portal."
 };

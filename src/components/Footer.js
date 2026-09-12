@@ -19,13 +19,13 @@ class Footer extends Component {
               <p className="small text-muted mb-3">
                 <strong className="brand-hyipexplorer-glow text-info">HYIPExplorer Pro</strong> is a trusted associate in the high-yield investment program space and the premier monitoring service, providing reliable daily payment verification, scam alerts, and unbiased evaluations.
               </p>
-              <div className="d-flex gap-2">
-                <a href="https://chat.whatsapp.com/KJ1R8WcP2yk3jtcxym1nsS?s=cl&p=a&ilr=1" target="_blank" rel="noreferrer" className="btn btn-sm btn-dark text-success border-success">
-                  <i className="bi bi-whatsapp"></i> WhatsApp Group
+              <div className="d-flex flex-wrap gap-2">
+                <a href="https://t.me/hyipexplorerpro" target="_blank" rel="noreferrer" className="btn btn-sm btn-dark text-info border-info d-flex align-items-center gap-1">
+                  <i className="bi bi-telegram"></i> Chat Admin
                 </a>
-                <button onClick={() => onNavigate('contact')} className="btn btn-sm btn-dark text-light border-secondary">
-                  <i className="bi bi-envelope-fill"></i> Contact Support
-                </button>
+                <a href="https://t.me/+Qd3n1TDjVbs4M2Q0" target="_blank" rel="noreferrer" className="btn btn-sm btn-dark text-primary border-primary d-flex align-items-center gap-1">
+                  <i className="bi bi-people-fill"></i> Join Telegram Group
+                </a>
               </div>
             </div>
 

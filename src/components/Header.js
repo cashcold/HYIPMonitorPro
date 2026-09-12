@@ -118,23 +118,25 @@ class Header extends Component {
           </div>
 
           <div className="d-flex align-items-center gap-3">
-             <a
-                href="https://t.me/hyipexplorerpro"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded bg-[#0088cc] hover:bg-[#0077b5] text-white cursor-pointer transition-colors shadow-xs"
-                title="Contact Support on Telegram"
-              >
-                <Send className="w-3 h-3 -rotate-45" />
-                <span className="hidden sm:inline">Telegram</span>
-              </a>
-            <span className="text-muted">|</span>
-            <button
-              onClick={() => onNavigate('contact')}
-              className="btn btn-link p-0 text-light text-decoration-none small"
+            <a
+              href="https://t.me/hyipexplorerpro"
+              target="_blank"
+              rel="noreferrer"
+              className="text-info text-decoration-none small d-flex align-items-center gap-1 fw-bold"
+              title="Chat Admin on Telegram"
             >
-              <i className="bi bi-envelope"></i> Support
-            </button>
+              <i className="bi bi-telegram"></i> Chat Admin
+            </a>
+            <span className="text-muted">|</span>
+            <a
+              href="https://t.me/+Qd3n1TDjVbs4M2Q0"
+              target="_blank"
+              rel="noreferrer"
+              className="text-primary text-decoration-none small d-flex align-items-center gap-1 fw-bold"
+              title="Join Telegram Group"
+            >
+              <i className="bi bi-people-fill"></i> Join Telegram Group
+            </a>
           </div>
         </div>
 
