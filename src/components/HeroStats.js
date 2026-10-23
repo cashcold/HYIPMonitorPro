@@ -6,8 +6,12 @@ class HeroStats extends Component {
     const { stats, onNavigate, projects, isAdminAuthenticated } = this.props;
 
     const recentProjects = projects ? projects.slice(0, 5) : [];
-    const payingCount = stats ? stats.payingProjects : 0;
-    const notPayingCount = stats ? stats.notPayingProjects : 0;
+    const payingCount = (projects && projects.length > 0)
+      ? projects.filter(p => p.status === 'PAYING').length
+      : (stats ? (stats.payingProjects ?? stats.payingCount ?? 0) : 0);
+    const notPayingCount = (projects && projects.length > 0)
+      ? projects.filter(p => p.status === 'NOT PAYING' || p.status === 'SCAM').length
+      : (stats ? (stats.notPayingProjects ?? stats.scamProjects ?? 0) : 0);
     const totalMembers = this.props.activeMembersCount || (stats ? stats.totalMembers : 14289);
     const totalReviews = stats ? stats.totalReviews : 0;
     const totalInvestedDisplay = (stats && stats.totalInvestmentsListed) ? stats.totalInvestmentsListed : '$90,084';

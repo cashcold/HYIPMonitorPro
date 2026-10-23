@@ -1913,21 +1913,26 @@ export const fallbackProjects = [
   }
 ];
 
+const activeFallbackProjects = fallbackProjects.filter(p => p.approved !== false && p.status !== 'PENDING');
+const payingFallbackCount = activeFallbackProjects.filter(p => p.status === 'PAYING').length;
+const notPayingFallbackCount = activeFallbackProjects.filter(p => p.status === 'NOT PAYING' || p.status === 'SCAM').length;
+const totalFallbackReviews = fallbackProjects.reduce((sum, p) => sum + (p.reviewsCount || 0), 0);
+
 export const fallbackStats = {
-  totalProjects: 13,
-  payingProjects: 4,
-  notPayingProjects: 2,
+  totalProjects: fallbackProjects.length,
+  payingProjects: payingFallbackCount,
+  notPayingProjects: notPayingFallbackCount,
   pendingProjects: 0,
   totalMembers: 14289,
-  totalReviews: 11510,
+  totalReviews: totalFallbackReviews || 12352,
   totalInvestmentsListed: "$90,084",
   dailyVisits: 18450,
   monthlyVisits: 520000,
-  scamProjects: 2,
+  scamProjects: notPayingFallbackCount,
   usersCount: 2450,
   commentsCount: 2,
-  totalMonitored: 13,
-  payingCount: 4,
+  totalMonitored: fallbackProjects.length,
+  payingCount: payingFallbackCount,
   totalInvested: 90084,
   totalPayouts: 34219.50,
   insurancePool: 75000,
