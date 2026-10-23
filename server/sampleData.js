@@ -41,6 +41,244 @@ export const sampleCategories = [
 
 export const sampleProjects = [
   {
+    "id": "proj_energypoint",
+    "name": "Energy Point",
+    "domain": "energy-point-beta.vercel.app",
+    "url": "https://energy-point-beta.vercel.app/register?ref=HYIPEXPLORERPRO391",
+    "logo": "/images/energy_point_logo.jpg",
+    "banner": "/images/energy_point_banner.jpg",
+    "status": "PAYING",
+    "category": "Class \"Premium\" (TOP Choices)",
+    "rating": 9.9,
+    "reviewsCount": 842,
+    "votes": {
+      "excellent": 810,
+      "good": 25,
+      "average": 7,
+      "bad": 0,
+      "veryBad": 0
+    },
+    "currencyPrefix": "₵",
+    "bonus": "₵20 Free Signup Gift",
+    "ourInvestment": 2500,
+    "minDeposit": 100,
+    "maxDeposit": 12000,
+    "minWithdrawal": 20,
+    "roi": 2700,
+    "duration": "Crown 1 – Crown 7 (180 Days)",
+    "withdrawalType": "Instant / Automated (₵20 Daily)",
+    "referralPercent": "10% - 2% - 1%",
+    "lastPayoutDate": "Oct 23, 2026",
+    "startDate": "2026-10-01",
+    "monitoredDays": 23,
+    "monitorsCount": 1,
+    "ssl": "256-Bit SSL Encrypted (EV SSL)",
+    "hosting": "Vercel / Cloudflare",
+    "processors": [
+      "MTN Mobile Money",
+      "AirtelTigo MoMo",
+      "USDT (TRC20)",
+      "Bitcoin (BTC)",
+      "Ethereum (ETH)"
+    ],
+    "telegram": "https://t.me/+Qd3n1TDjVbs4M2Q0",
+    "description": "Energy Point is an innovative clean-energy yield platform and digital sponsor advertising ecosystem. Watch short daily energy sponsor clips, activate high-yield 180-day Crown tiers (Crown 1 to Crown 7), and receive guaranteed daily payouts straight to your Mobile Money (MTN & AirtelTigo) or crypto wallet. Get an instant ₵20 Free Signup Welcome Bonus upon registration. Minimum deposit ₵100, minimum withdrawal ₵20 daily.",
+    "country": "Ghana / United Kingdom",
+    "company": "Energy Point Ltd (Energy Point Tower, 100 Bishopsgate, London)",
+    "countryStats": [
+      {
+        "country": "Ghana",
+        "flag": "🇬🇭",
+        "votes": 412,
+        "percent": 49
+      },
+      {
+        "country": "Nigeria",
+        "flag": "🇳🇬",
+        "votes": 235,
+        "percent": 28
+      },
+      {
+        "country": "United Kingdom",
+        "flag": "🇬🇧",
+        "votes": 195,
+        "percent": 23
+      }
+    ],
+    "investmentPlans": [
+      {
+        "name": "Crown 1 (Energy 1)",
+        "minDeposit": 120,
+        "maxDeposit": 120,
+        "roi": "₵10 / Day (+1,400% Total ₵1,800)",
+        "duration": "180 Days",
+        "compounding": "No"
+      },
+      {
+        "name": "Crown 2 (Energy 2)",
+        "minDeposit": 350,
+        "maxDeposit": 350,
+        "roi": "₵32 / Day (+1,545% Total ₵5,760)",
+        "duration": "180 Days",
+        "compounding": "No"
+      },
+      {
+        "name": "Crown 3 (Energy 3 - POPULAR)",
+        "minDeposit": 1000,
+        "maxDeposit": 1000,
+        "roi": "₵100 / Day (+1,700% Total ₵18,000)",
+        "duration": "180 Days",
+        "compounding": "No"
+      },
+      {
+        "name": "Crown 4 (Energy 4)",
+        "minDeposit": 2500,
+        "maxDeposit": 2500,
+        "roi": "₵375 / Day (+2,600% Total ₵67,500)",
+        "duration": "180 Days",
+        "compounding": "No"
+      },
+      {
+        "name": "Crown 5 (Energy 5)",
+        "minDeposit": 4000,
+        "maxDeposit": 4000,
+        "roi": "₵600 / Day (+2,600% Total ₵108,000)",
+        "duration": "180 Days",
+        "compounding": "No"
+      },
+      {
+        "name": "Crown 6 (Energy 6)",
+        "minDeposit": 7000,
+        "maxDeposit": 7000,
+        "roi": "₵1,050 / Day (+2,600% Total ₵189,000)",
+        "duration": "180 Days",
+        "compounding": "No"
+      },
+      {
+        "name": "Crown 7 (Energy 7)",
+        "minDeposit": 12000,
+        "maxDeposit": 12000,
+        "roi": "₵1,800 / Day (+2,600% Total ₵324,000)",
+        "duration": "180 Days",
+        "compounding": "No"
+      }
+    ],
+    "whois": {
+      "domain": "energy-point-beta.vercel.app",
+      "ip": "76.76.21.21",
+      "country": "Ghana / United Kingdom",
+      "registrar": "Vercel Inc. / Cloudflare",
+      "created": "2026-10-01",
+      "expires": "2027-10-01",
+      "updated": "2026-10-01",
+      "nameservers": "ns1.vercel-dns.com, ns2.vercel-dns.com"
+    },
+    "payoutHistory": [
+      {
+        "date": "Oct 23, 2026",
+        "amount": "₵20.00 GHS",
+        "currency": "USDT (TRC20)",
+        "wallet": "Car***_M",
+        "txHash": "Verified Instant",
+        "status": "Approved"
+      },
+      {
+        "date": "Oct 23, 2026",
+        "amount": "₵1,500.00 GHS",
+        "currency": "Ethereum (ETH)",
+        "wallet": "Kof***ah",
+        "txHash": "Verified Instant",
+        "status": "Approved"
+      },
+      {
+        "date": "Oct 23, 2026",
+        "amount": "₵250.00 GHS",
+        "currency": "Bitcoin (BTC)",
+        "wallet": "Ele***_R",
+        "txHash": "Verified Instant",
+        "status": "Approved"
+      },
+      {
+        "date": "Oct 23, 2026",
+        "amount": "₵35.00 GHS",
+        "currency": "USDT (TRC20)",
+        "wallet": "Bit***99",
+        "txHash": "Verified Instant",
+        "status": "Approved"
+      },
+      {
+        "date": "Oct 22, 2026",
+        "amount": "₵2,200.00 GHS",
+        "currency": "MTN MoMo",
+        "wallet": "Dav***_M",
+        "txHash": "Verified MoMo Instant",
+        "status": "Approved"
+      },
+      {
+        "date": "Oct 22, 2026",
+        "amount": "₵400.00 GHS",
+        "currency": "Bitcoin (BTC)",
+        "wallet": "Kwa***_O",
+        "txHash": "Verified Instant",
+        "status": "Approved"
+      },
+      {
+        "date": "Oct 22, 2026",
+        "amount": "₵50.00 GHS",
+        "currency": "USDT (TRC20)",
+        "wallet": "Mat***_R",
+        "txHash": "Verified Instant",
+        "status": "Approved"
+      },
+      {
+        "date": "Oct 21, 2026",
+        "amount": "₵3,500.00 GHS",
+        "currency": "AirtelTigo MoMo",
+        "wallet": "Emm***_W",
+        "txHash": "Verified MoMo Instant",
+        "status": "Approved"
+      },
+      {
+        "date": "Oct 21, 2026",
+        "amount": "₵650.00 GHS",
+        "currency": "Bitcoin (BTC)",
+        "wallet": "Ais***_B",
+        "txHash": "Verified Instant",
+        "status": "Approved"
+      },
+      {
+        "date": "Oct 20, 2026",
+        "amount": "₵80.00 GHS",
+        "currency": "MTN MoMo",
+        "wallet": "Mar***_V",
+        "txHash": "Verified MoMo Instant",
+        "status": "Approved"
+      },
+      {
+        "date": "Oct 20, 2026",
+        "amount": "₵5,000.00 GHS",
+        "currency": "Ethereum (ETH)",
+        "wallet": "Cry***ut",
+        "txHash": "Verified Instant",
+        "status": "Approved"
+      },
+      {
+        "date": "Oct 19, 2026",
+        "amount": "₵1,000.00 GHS",
+        "currency": "MTN MoMo",
+        "wallet": "Gol***er",
+        "txHash": "Verified MoMo Instant",
+        "status": "Approved"
+      }
+    ],
+    "trafficData": [
+      { "date": "Oct 01, 2026", "visits": 2100, "pageviews": 8400 },
+      { "date": "Oct 08, 2026", "visits": 5400, "pageviews": 19200 },
+      { "date": "Oct 15, 2026", "visits": 8900, "pageviews": 32100 },
+      { "date": "Oct 22, 2026", "visits": 14200, "pageviews": 58900 }
+    ]
+  },
+  {
     "id": "proj_primegold",
     "name": "Prime Gold Resources",
     "domain": "prime-gold-resources.vercel.app",
@@ -1716,6 +1954,70 @@ export const sampleProjects = [
 ];
 
 export const sampleReviews = [
+  {
+    "id": "rev_energy_1",
+    "projectId": "proj_energypoint",
+    "projectName": "Energy Point",
+    "name": "Guy Hawkins",
+    "email": "guy_hawkins@outlook.com",
+    "country": "United States",
+    "rating": 5,
+    "reviewText": "The real-time payouts and clean energy yield ROI helped me catch market opportunities seamlessly. It's like having a professional analyst and clean energy farm by my side 24/7.",
+    "paymentAmount": 1500,
+    "wallet": "MoMo / TRC20: TLq8***8vX",
+    "screenshot": "",
+    "status": "approved",
+    "ip": "142.250.*.*",
+    "createdAt": "2026-10-23T01:15:00Z"
+  },
+  {
+    "id": "rev_energy_2",
+    "projectId": "proj_energypoint",
+    "projectName": "Energy Point",
+    "name": "Esther Howard",
+    "email": "esther_howard@gmail.com",
+    "country": "United Kingdom",
+    "rating": 5,
+    "reviewText": "This platform has completely transformed how I generate passive income. The 180-day Crown tiers delivered returns exactly on time. Instant MoMo & TRC20 withdrawals work flawlessly.",
+    "paymentAmount": 250,
+    "wallet": "MoMo: 0244***102",
+    "screenshot": "",
+    "status": "approved",
+    "ip": "81.187.*.*",
+    "createdAt": "2026-10-22T14:30:00Z"
+  },
+  {
+    "id": "rev_energy_3",
+    "projectId": "proj_energypoint",
+    "projectName": "Energy Point",
+    "name": "Marcus Vance",
+    "email": "marcus_vance@yahoo.com",
+    "country": "Germany",
+    "rating": 5,
+    "reviewText": "Provides bank-grade security and transparent transaction logs. I activated Crown 3 with ₵1,000 and received my daily ₵100 payouts without any delays.",
+    "paymentAmount": 1000,
+    "wallet": "BTC: 1A1z***7xR",
+    "screenshot": "",
+    "status": "approved",
+    "ip": "188.114.*.*",
+    "createdAt": "2026-10-21T09:45:00Z"
+  },
+  {
+    "id": "rev_energy_4",
+    "projectId": "proj_energypoint",
+    "projectName": "Energy Point",
+    "name": "Kof***ah",
+    "email": "kofi_mensah@gmail.com",
+    "country": "Ghana",
+    "rating": 5,
+    "reviewText": "Claimed the ₵20 free welcome bonus on signup and activated Crown 2. Received my daily Mobile Money payout straight to my MTN MoMo wallet in under 3 minutes!",
+    "paymentAmount": 32,
+    "wallet": "MTN MoMo: 0553***891",
+    "screenshot": "",
+    "status": "approved",
+    "ip": "102.176.*.*",
+    "createdAt": "2026-10-20T16:10:00Z"
+  },
   {
     "id": "rev_aura_1",
     "projectId": "proj_auradiamond",

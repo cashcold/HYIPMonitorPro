@@ -67,6 +67,7 @@ class ProjectCard extends Component {
 
   renderProcessorIcon(proc) {
     const p = proc.toLowerCase();
+    if (p.includes('mobile') || p.includes('momo') || p.includes('mtn') || p.includes('airteltigo')) return <i key={proc} className="bi bi-phone-fill text-warning fs-5 me-1" title={proc}></i>;
     if (p.includes('bitcoin') || p.includes('btc')) return <i key={proc} className="bi bi-currency-bitcoin text-warning fs-5 me-1" title="Bitcoin"></i>;
     if (p.includes('usdt') || p.includes('tether')) return <i key={proc} className="bi bi-coin text-info fs-5 me-1" title="USDT"></i>;
     if (p.includes('ethereum') || p.includes('eth')) return <i key={proc} className="bi bi-currency-ethereum text-primary fs-5 me-1" title="Ethereum"></i>;
@@ -197,8 +198,11 @@ class ProjectCard extends Component {
                     </span>
                   </div>
                   <div className="small text-slate-300">
-                    <div>Monitored Deposit: <strong className="blink-monitored-deposit">${project.ourInvestment}</strong></div>
-                    <div>Min Deposit Limit: <strong className="blink-min-deposit">${project.minDeposit}</strong></div>
+                    <div>Monitored Deposit: <strong className="blink-monitored-deposit">{project.currencyPrefix || '$'}{project.ourInvestment}</strong></div>
+                    <div>Min Deposit Limit: <strong className="blink-min-deposit">{project.currencyPrefix || '$'}{project.minDeposit}</strong></div>
+                    {project.minWithdrawal && (
+                      <div>Min Withdrawal: <strong className="text-warning fw-bold">{project.currencyPrefix || '$'}{project.minWithdrawal} Daily</strong></div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -207,8 +211,15 @@ class ProjectCard extends Component {
             {/* Center Bento Sub-Box: Plan duration, last payout, referral */}
             <div className="col-md-5">
               <div className="bento-box-inner h-100">
-                <div className="text-danger fw-bold mb-1 small">
-                  <i className="bi bi-lightning-charge me-1"></i> {project.duration}
+                <div className="d-flex flex-wrap align-items-center gap-2 mb-1">
+                  <div className="text-danger fw-bold small">
+                    <i className="bi bi-lightning-charge me-1"></i> {project.duration}
+                  </div>
+                  {project.bonus && (
+                    <span className="badge bg-warning text-dark fw-bold px-2 py-0.5 small shadow-sm animate-pulse">
+                      <i className="bi bi-gift-fill me-1 text-danger"></i> BONUS: {project.bonus}
+                    </span>
+                  )}
                 </div>
                 <div className="row g-2 small text-slate-300">
                   <div className="col-6">
@@ -218,7 +229,7 @@ class ProjectCard extends Component {
                   <div className="col-6">
                     <div>Affiliate: <strong className="blink-affiliate">{project.referralPercent}</strong></div>
                     <div className="d-flex align-items-center mt-1">
-                      <span className="me-1 small text-muted">Crypto:</span>
+                      <span className="me-1 small text-muted">Crypto / MoMo:</span>
                       {project.processors && project.processors.map(p => this.renderProcessorIcon(p))}
                     </div>
                   </div>

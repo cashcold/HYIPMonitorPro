@@ -228,6 +228,11 @@ class ProjectDetailsPage extends Component {
                     {project.status}
                   </span>
                   <span className="badge bg-secondary">{project.category}</span>
+                  {project.bonus && (
+                    <span className="badge bg-warning text-dark fw-bold px-2.5 py-1.5 shadow-sm animate-pulse">
+                      <i className="bi bi-gift-fill text-danger me-1"></i> BONUS: {project.bonus}
+                    </span>
+                  )}
                 </div>
 
                 <p className="text-info mb-2 small font-monospace d-flex align-items-center gap-2">
@@ -338,8 +343,8 @@ class ProjectDetailsPage extends Component {
                       {project.investmentPlans && project.investmentPlans.map((plan, idx) => (
                         <tr key={idx}>
                           <td className="fw-bold text-info">{plan.name}</td>
-                          <td className="text-success fw-bold">${plan.minDeposit}</td>
-                          <td>${plan.maxDeposit ? plan.maxDeposit.toLocaleString() : 'Unlimited'}</td>
+                          <td className="text-success fw-bold">{project.currencyPrefix || '$'}{plan.minDeposit}</td>
+                          <td>{plan.maxDeposit ? `${project.currencyPrefix || '$'}${plan.maxDeposit.toLocaleString()}` : 'Unlimited'}</td>
                           <td className="fw-bold text-warning">{plan.roi}</td>
                           <td>{plan.duration}</td>
                           <td>
@@ -388,8 +393,21 @@ class ProjectDetailsPage extends Component {
                 <div className="card-body p-3">
                   <ul className="list-group list-group-flush bg-transparent small text-slate-300">
                     <li className="list-group-item bg-transparent text-light border-secondary d-flex justify-content-between">
-                      <span>Our Investment:</span> <strong className="text-danger">${project.ourInvestment}</strong>
+                      <span>Our Investment:</span> <strong className="text-danger">{project.currencyPrefix || '$'}{project.ourInvestment}</strong>
                     </li>
+                    <li className="list-group-item bg-transparent text-light border-secondary d-flex justify-content-between">
+                      <span>Min Deposit:</span> <strong className="text-success">{project.currencyPrefix || '$'}{project.minDeposit}</strong>
+                    </li>
+                    {project.minWithdrawal && (
+                      <li className="list-group-item bg-transparent text-light border-secondary d-flex justify-content-between">
+                        <span>Min Withdrawal:</span> <strong className="text-warning fw-bold">{project.currencyPrefix || '$'}{project.minWithdrawal} Daily</strong>
+                      </li>
+                    )}
+                    {project.bonus && (
+                      <li className="list-group-item bg-transparent text-light border-secondary d-flex justify-content-between">
+                        <span>Free Bonus Gift:</span> <strong className="text-warning fw-bold">{project.bonus}</strong>
+                      </li>
+                    )}
                     <li className="list-group-item bg-transparent text-light border-secondary d-flex justify-content-between">
                       <span>Withdrawal Mode:</span> <strong className="text-info">{project.withdrawalType}</strong>
                     </li>
